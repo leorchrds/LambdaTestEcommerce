@@ -1,0 +1,15 @@
+export const locators = {
+    firstName: '#input-payment-firstname',
+    lastName: '#input-payment-lastname',
+    email: '#input-payment-email',
+    telephone: '#input-payment-telephone',
+    password: '#input-payment-password',
+    confirmPassword: '#input-payment-confirm',
+    company: '#input-payment-company',
+    address1: '#input-payment-address-1',
+    address2: '#input-payment-address-2',
+    city: '#input-payment-city',
+    postCode: '#input-payment-postcode',
+    country: '#input-payment-country',
+    state: '#input-payment-zone',
+}
