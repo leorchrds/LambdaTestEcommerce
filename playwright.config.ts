@@ -20,17 +20,16 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['html', { open: 'never' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL:'https://ecommerce-playground.lambdatest.io/',
-    viewport:{
-      width:2560,
-      height:1620,
+    viewport: {
+      width: 2560,
+      height: 1620,
     },
     headless: false,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'https://ecommerce-playground.lambdatest.io/',
     launchOptions: {
       slowMo: 300
     },
@@ -43,21 +42,21 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }, 
+      use: { ...devices['Desktop Chrome'] },
       timeout: 120000,
     },
-    
+    /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
       timeout: 120000,
     },
-  /*  
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-    */
+    /*  
+      {
+        name: 'webkit',
+        use: { ...devices['Desktop Safari'] },
+      },
+      */
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

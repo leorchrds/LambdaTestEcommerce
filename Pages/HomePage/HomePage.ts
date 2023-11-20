@@ -5,11 +5,11 @@ export default class HomePage {
     constructor(public page: Page) { }
 
     async goToPage() {
-        await this.page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=common/home');
+        await this.page.goto('/');
     }
     async goToProduct() {
-        await this.page.locator(locators.productCategory).click();
-        await this.page.locator(locators.navBar).nth(0).click();
+        await this.page.click(locators.productCategory);
+        await this.page.click(locators.navBar);
     }
     async validateProductPage() {
         await expect(this.page).toHaveTitle('Components')

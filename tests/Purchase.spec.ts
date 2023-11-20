@@ -5,9 +5,6 @@ import CheckoutPage from "../Pages/CheckoutPage/CheckoutPage";
 import SuccessPage from "../Pages/SuccessPage/SuccessPage.ts";
 import ConfirmationPage from "../Pages/ConfirmationPage/ConfirmationPage.ts";
 
-
-
-
 test('place order and purchase', async ({ page, browser }) => {
 
     const context = await browser.newContext({

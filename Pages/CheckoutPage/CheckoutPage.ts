@@ -26,6 +26,6 @@ export default class CheckoutPage {
         await this.page.getByText('Continue').click();
     }
     async validateOrder() {
-        expect(this.page).toHaveURL('https://ecommerce-playground.lambdatest.io/index.php?route=extension/maza/checkout/confirm');
+        expect(this.page).toHaveURL('index.php?route=extension/maza/checkout/confirm');
     }
 }

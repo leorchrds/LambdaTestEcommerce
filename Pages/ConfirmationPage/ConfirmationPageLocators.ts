@@ -1,3 +1,3 @@
 export const locators = {
-    confirmOrderBttn:'#button-confirm'
+ confirmOrderBtn:'#button-confirm >> nth=-1'
 }

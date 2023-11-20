@@ -3,5 +3,6 @@ export const locators = {
     loginBtn: 'a.list-group-item',
     email: '#input-email',
     password: '#input-password',
-    submitLogin: 'input[value="Login"]'
+    submitLogin: 'input[value="Login"]',
+    alert: '#account-login .alert'
 }

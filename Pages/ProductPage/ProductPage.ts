@@ -11,6 +11,6 @@ export default class ProductPage {
         expect(productData).toBeTruthy();
     }
     async buyNowButton(){
-        await this.page.locator(locators.BuyNowBttn).click();
+        await this.page.click(locators.BuyNowBttn);
     }
 }
