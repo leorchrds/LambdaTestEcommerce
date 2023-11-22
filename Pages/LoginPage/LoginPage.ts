@@ -23,18 +23,18 @@ export default class LoginPage {
         await this.page.fill(locators.password, password);
         await this.page.click(locators.submitLogin);
         const alert = await this.page.locator(locators.alert).innerText();
-        expect(alert).toEqual(' Warning: No match for E-Mail Address and/or Password.')
+        expect(alert).toEqual(' Warning: No match for E-Mail Address and/or Password.');
     }
     async invalidEmailAndPassword() {
         await this.page.fill(locators.email, faker.internet.email());
         await this.page.fill(locators.password, faker.internet.password());
         await this.page.click(locators.submitLogin);
         const alert = await this.page.locator(locators.alert).innerText();
-        expect(alert).toEqual(' Warning: No match for E-Mail Address and/or Password.')
+        expect(alert).toEqual(' Warning: No match for E-Mail Address and/or Password.');
     }
     async withoutEmailAndPassword() {
         await this.page.click(locators.submitLogin);
         const alert = await this.page.locator(locators.alert).innerText();
-        expect(alert).toEqual(' Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.')
+        expect(alert).toEqual(' Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.');
     }
 }

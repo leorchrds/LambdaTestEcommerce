@@ -12,6 +12,6 @@ export default class HomePage {
         await this.page.click(locators.navBar);
     }
     async validateProductPage() {
-        await expect(this.page).toHaveTitle('Components')
+        await expect(this.page).toHaveTitle('Components');
     }
 }

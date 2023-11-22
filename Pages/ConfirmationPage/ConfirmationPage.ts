@@ -3,7 +3,7 @@ import { locators } from "./ConfirmationPageLocators";
 
 export default class ConfirmationPage {
     constructor(public page: Page) { }
-
+    
     async validateConfirmationPage() {
         await this.page.waitForLoadState('domcontentloaded');
         expect(this.page).toHaveURL('/index.php?route=extension/maza/checkout/confirm');

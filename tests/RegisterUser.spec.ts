@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import test from "@playwright/test";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
+
 const email = faker.internet.email();
 const password = faker.internet.password();
 

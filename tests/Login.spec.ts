@@ -2,13 +2,11 @@ import test from "@playwright/test";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import dotenv from "dotenv";
 
-dotenv.config()
-
-
+dotenv.config();
 
 test.beforeEach(async ({ page }) => {
     await page.goto('/index.php?route=account/login');
-  });
+});
 test.describe('Login test', () => {
     const email = process.env.EMAIL
     const password = process.env.PASSWORD

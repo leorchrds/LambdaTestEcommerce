@@ -7,5 +7,4 @@ export default class SuccessPage {
         await this.page.waitForLoadState('domcontentloaded');
         expect(this.page).toHaveTitle('Your order has been placed!');
     }
-   
 }

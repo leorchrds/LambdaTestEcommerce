@@ -25,8 +25,8 @@ test('place order and purchase', async ({ page, browser }) => {
     await checkoutPage.continueButton();
 
     const confirmationPage = new ConfirmationPage(page);
-    confirmationPage.validateConfirmationPage
-    confirmationPage.confirmOrderBttn
+    await confirmationPage.validateConfirmationPage();
+    await confirmationPage.confirmOrderBttn();
     
     const successPage = new SuccessPage(page);
     await successPage.validateSuccessPage();

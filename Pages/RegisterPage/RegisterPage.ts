@@ -9,7 +9,6 @@ export default class RegisterPage {
         await this.page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/register');
         await this.page.waitForLoadState('domcontentloaded');
     }
-
     async registerUser(email: string, password: string) {
         await this.page.fill(locators.firstname, faker.person.firstName());
         await this.page.fill(locators.lastname, faker.person.lastName());
@@ -21,10 +20,8 @@ export default class RegisterPage {
         await this.page.click(locators.policyPrivacyTerms);
         await this.page.click(locators.continueBtn);
     }
-
     async validatedRegister() {
         await this.page.waitForURL('https://ecommerce-playground.lambdatest.io/index.php?route=account/success');
         await expect(this.page).toHaveTitle('Your Account Has Been Created!');
     }
-
 }
